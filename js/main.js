@@ -9,6 +9,7 @@ async function loadComponent(selector, path) {
 
 async function initPage() {
     await loadComponent('#header-root', 'header.html');
+    await loadComponent('#hero-root', 'hero.html');
 }
 
 initPage();
