@@ -29,6 +29,8 @@
     background-color: #FFFFFF;
     padding: 32px 16px;
     cursor: pointer;
+    justify-content: space-between;
+    display: flex;
 }
 
 .organizators-accordion-item {
