@@ -1,11 +1,11 @@
 .organizators-container {
-    width: calc(100% + 8px);
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-left: -4px;
-    margin-right: -4px;
     margin-top: -96px;
 }
 
@@ -110,6 +110,9 @@
 
     .organizators-container {
         margin-top: -116px;
+        margin-left: -24px;
+        margin-right: -24px;
+        width: calc(100% + 48px);
     }
     .organizators-accordion-item.open {
         padding: 24px;
@@ -119,9 +122,9 @@
 
 @media (min-width: 1400px) {
     .organizators-container {
-        width: calc(100% + 64px);
-        margin-left: -32px;
-        margin-right: -32px;
+        width: calc(100% + 234px);
+        margin-left: -117px;
+        margin-right: -117px;
     }
 
     .organizators-accordion {
@@ -145,9 +148,9 @@
 
 @media (min-width: 1920px) {
     .organizators-container {
-        width: calc(100% + 96px);
-        margin-left: -48px;
-        margin-right: -48px;
+        width: calc(100% + 320px);
+        margin-left: -160px;
+        margin-right: -160px;
         padding-left: 160px;
         padding-right: 160px;
     }
