@@ -6,6 +6,7 @@
     gap: 16px;
     margin-left: -4px;
     margin-right: -4px;
+    margin-top: -96px;
 }
 
 .organizators-accordion {
@@ -32,16 +33,20 @@
 
 .organizators-accordion-item {
     display: none;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
 }
 
 .organizators-accordion-item.open {
     display: block;
     background-color: #FFFFFF;
-    padding: 16px;
+    padding: 24px 16px;
     border-radius: 16px;
     max-height: 1000px;
     
 }
+
 
 .organizators-accordion-item-image {
     width: auto;
@@ -52,19 +57,30 @@
 .organizators-accordion-content {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 16px;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 .organizators-accordion-item-text {
-    color: #000000;
     margin: 0;
     font-size: 16px;
-    line-height: 120%;
+    line-height: 100%;
     font-family: 'Inter';
     font-weight: 400;
     font-style: Regular;
     letter-spacing: 0%;
+    color: #27509B;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.organizators-divider {
+    width: 1px;
+    align-self: stretch;
+    flex: 0 0 1px;
+    background-color: #D7F0E2;
+    opacity: 1;
 }
 
 @media (min-width: 500px) {
@@ -80,11 +96,50 @@
     }
 }
 
+@media (min-width: 770px) {
+    .organizators-accordion {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .organizators-accordion-item {
+        box-sizing: border-box;
+        flex: 0 0 calc(50% - 2px);
+        max-width: calc(50% - 2px);
+    }
+
+    .organizators-container {
+        margin-top: -116px;
+    }
+    .organizators-accordion-item.open {
+        padding: 24px;
+        
+    }
+}
+
 @media (min-width: 1400px) {
     .organizators-container {
         width: calc(100% + 64px);
         margin-left: -32px;
         margin-right: -32px;
+    }
+
+    .organizators-accordion {
+        flex-wrap: nowrap;
+        perspective: 100px;
+    }
+
+    .organizators-accordion-item {
+        flex: 0 0 calc((100% - 12px) / 4);
+        max-width: calc((100% - 12px) / 4);
+    }
+
+    .organizators-accordion-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .organizators-container {
+        margin-top: -136px;
     }
 }
 
@@ -93,5 +148,7 @@
         width: calc(100% + 96px);
         margin-left: -48px;
         margin-right: -48px;
+        padding-left: 160px;
+        padding-right: 160px;
     }
 }
