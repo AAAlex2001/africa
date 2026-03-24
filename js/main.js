@@ -11,6 +11,7 @@ async function initPage() {
     await loadComponent('#header-root', 'header.html');
     await loadComponent('#hero-root', 'hero.html');
     await loadComponent('#organizators-root', 'organizators.html');
+    await loadComponent('#mission-root', 'mission.html');
 
     if (typeof organizatorsAccordion === 'function') {
         organizatorsAccordion();

@@ -25,7 +25,7 @@
 
 html {
     margin: 0;
-    padding: 0px 4px;
+    padding: 0px 16px;
     background-color: #D7F0E2;
 }
 
@@ -46,21 +46,28 @@ body > * + * {
     body > * + * {
         margin-top: 120px;
     }
+
+    html {
+        padding: 0px 24px;
+    }
 }
 
 @media (min-width: 1400px) {
     html {
-        padding: 0px 32px;
+        padding: 0px 117px;
     }
 
     body > * + * {
-        margin-top: 140px;
+        margin-top: 150px;
     }
 }
 
 @media (min-width: 1920px) {
 
-    
+    html {
+        padding: 0px 160px;
+    }
+
     body {
         padding-top: 100px;
     }
