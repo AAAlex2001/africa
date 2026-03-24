@@ -1,6 +1,10 @@
 .hero-container {
+    width: calc(100% + 8px);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    margin-left: -4px;
+    margin-right: -4px;
     padding: 48px 16px;
     gap: 24px;
     background-image:
@@ -185,12 +189,18 @@
 
 @media (min-width: 1400px) {
     .hero-container {
+        width: calc(100% + 64px);
+        margin-left: -32px;
+        margin-right: -32px;
         padding: 112px 117px;
     }
 }
 
 @media (min-width: 1920px) {
     .hero-container {
+        width: calc(100% + 96px);
+        margin-left: -48px;
+        margin-right: -48px;
         padding: 112px 160px;
     }
 }
