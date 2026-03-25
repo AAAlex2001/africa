@@ -37,7 +37,7 @@
     display: none;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
 .organizators-accordion-item.open {
@@ -131,7 +131,6 @@
 
     .organizators-accordion {
         flex-wrap: nowrap;
-        perspective: 100px;
     }
 
     .organizators-accordion-item {
@@ -143,8 +142,30 @@
         transform: translateY(-5px);
     }
 
+    .organizators-accordion:has(.organizators-accordion-item:hover) .organizators-accordion-item:not(:hover) {
+        filter: blur(2px) brightness(0.82);
+        opacity: 0.7;
+    }
+
+    .organizators-accordion-item:hover {
+        filter: none;
+        opacity: 1;
+        transform: translateY(-2px);
+        z-index: 2;
+    }
+
+    .organizators-accordion-item:hover .organizators-accordion-item-text {
+        color: #376BCA;
+    }
+
     .organizators-container {
         margin-top: -146px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .organizators-accordion-item {
+        transition: none;
     }
 }
 
