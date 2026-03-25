@@ -1,6 +1,5 @@
 .burger-button {
 	position: relative;
-	flex-shrink: 0;
 	z-index: 3;
 	display: flex;
 	width: 20px;
@@ -46,18 +45,17 @@
 
 .burger-menu {
 	position: fixed;
-	top: 78px;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-start;
+	justify-content: flex-start;
 	gap: 40px;
 	width: 100vw;
 	height: calc(100dvh - 78px);
-	padding: 48px 24px;
+	padding: 48px 16px;
 	box-sizing: border-box;
 	background: #FFFFFF;
 	opacity: 0;
@@ -74,15 +72,20 @@
 	visibility: visible;
 	pointer-events: auto;
 	transform: translateY(0);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 32px;
 }
 
 .burger-menu-nav {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-start;
+    justify-content: center;
 	gap: 32px;
 	width: 100%;
-	max-width: 360px;
 }
 
 .burger-link {
@@ -90,16 +93,16 @@
 	text-decoration: none;
 	font-family: 'Inter';
 	font-size: 24px;
-	line-height: 29px;
+	line-height: 100%;
 	font-weight: 400;
 	letter-spacing: 0.01em;
-	text-align: center;
+	text-align: left;
 }
 
 .burger-register-link {
 	display: inline-flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
+	align-items: flex-start;
 	min-width: 185px;
 	padding: 20px 32px;
 	border-radius: 32px;
@@ -109,7 +112,7 @@
 	text-decoration: none;
 	font-family: 'Inter';
 	font-size: 16px;
-	line-height: 19px;
+	line-height: 120%;
 	font-weight: 700;
 	letter-spacing: 0.01em;
 	box-sizing: border-box;
