@@ -97,6 +97,7 @@
 	font-weight: 400;
 	letter-spacing: 0.01em;
 	text-align: left;
+    font-style: Regular;
 }
 
 .burger-register-link {
@@ -116,21 +117,10 @@
 	font-weight: 700;
 	letter-spacing: 0.01em;
 	box-sizing: border-box;
+    font-style: Bold;
 }
 
 @media (min-width: 500px) {
-	.burger-button,
-	.burger-menu {
-		display: none;
-	}
-
-	.burger-menu {
-		padding-left: 32px;
-		padding-right: 32px;
-	}
-}
-
-@media (min-width: 1024px) {
 	.burger-button,
 	.burger-menu {
 		display: none;
