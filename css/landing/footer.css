@@ -29,6 +29,9 @@
     line-height: 100%;
     margin: 0;
 }
+.footer-link:hover {
+    color: #376BCA;
+}
 
 .footer-copy {
     margin: 0;

@@ -70,6 +70,9 @@ body > #hero-root {
     font-style: Regular;
     white-space: nowrap;
 }
+.header-nav-link:hover {
+    color: #376BCA;
+}
 
 .header-language {
     position: relative;
@@ -87,6 +90,9 @@ body > #hero-root {
     font-weight: 400;
     letter-spacing: 0.01em;
     font-style: Regular;
+}
+.header-language a:hover {
+    color: #376BCA;
 }
 
 .header-button-ru {
@@ -115,6 +121,10 @@ body > #hero-root {
     line-height: 130%;
     font-weight: 700;
     font-style: Bold;
+}
+.header-button-register:hover {
+    background-color: #376BCA;
+    border-color: #376BCA;
 }
 
 .header-burger-wrapper {

@@ -85,6 +85,10 @@
     border: 1px solid #27509B;
     cursor: pointer;
 }
+.mission-button:hover {
+    background-color: #376BCA;
+    border-color: #376BCA;
+}
 
 @media (min-width: 500px) {
 
