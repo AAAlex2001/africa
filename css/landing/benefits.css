@@ -90,17 +90,18 @@
 }
 
 .benefits-buttons {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 8px;
     width: 100%;
 }
 
 .benefits-buttons-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
-    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 8px;
-    width: 100%;
 }
 
 .benefits-button {
@@ -143,6 +144,11 @@
     .benefits-title {
         font-size: 32px;
     }
+
+    .benefits-button-wide {
+        width: fit-content;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 770px) {
@@ -172,11 +178,6 @@
         font-size: 16px;
         line-height: 19px;
         padding: 20px 32px;
-    }
-
-    .benefits-button-wide {
-        width: fit-content;
-        justify-content: center;
     }
 
     .benefits-buttons-row {
