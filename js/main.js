@@ -36,6 +36,7 @@ async function initPage() {
     await loadComponent('#hero-root', 'hero.html');
     await loadComponent('#organizators-root', 'organizators.html');
     await loadComponent('#mission-root', 'mission.html');
+    await loadComponent('#request-root', 'request.html');
 
     initBurgerMenu();
 }
