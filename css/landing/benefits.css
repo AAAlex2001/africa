@@ -120,6 +120,7 @@
     box-sizing: border-box;
     width: fit-content;
     max-width: 100%;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 .benefits-button:hover {
     background: #376BCA;
@@ -139,6 +140,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 16px 16px;
+    transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 .benefits-button:hover .benefits-button-icon {
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 12V1M8 12L3 6.86381M8 12L13 6.86381' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 12V15H15V12' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");

@@ -104,6 +104,7 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     text-decoration: none;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .requests-buttons {
@@ -127,6 +128,7 @@
     line-height: 120%;
     letter-spacing: 0.01em;
     text-decoration: none;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .request-button-outline:hover {
