@@ -90,3 +90,112 @@
     margin: 0;
     padding: 0;
 }
+
+.request-button-filled {
+    background-color: #FFFFFF;
+    color: #003366;
+    border: 1px solid #FFFFFF;
+    padding: 16px 24px;
+    cursor: pointer;
+    border-radius: 32px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 1%;
+}
+
+.requests-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.request-button-outline {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 16px 24px;
+    cursor: pointer;
+    border-radius: 32px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 1%;
+}
+
+.request-button-outline:hover {
+    color: #9FC1FF;
+    border-color: #9FC1FF;
+}
+
+.request-button-filled:hover {
+    color: #27509B;
+}
+
+@media (min-width: 500px) {
+    .request-title {
+        font-size: 32px;
+    }
+
+    .request-texts {
+        gap: 24px;
+    }
+
+    .requests-buttons {
+        flex-direction: row;
+        gap: 32px;
+    }
+}
+
+@media (min-width: 770px) {
+    .request-container {
+        gap: 32px;
+        padding: 64px 24px;
+    }
+
+    .request-content-container {
+        gap: 32px;
+    }
+
+    .request-texts {
+        gap: 32px;
+    }
+
+    .request-description,
+    .highlight,
+    .bold,
+    .request-step {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .request-container {
+        gap: 32px;
+        padding: 64px 24px;
+    }
+
+    .request-content-container {
+        gap: 32px;
+    }
+
+    .request-texts {
+        gap: 32px;
+    }
+
+    .request-description,
+    .highlight,
+    .bold,
+    .request-step {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .request-container {
+        gap: 32px;
+        padding: 64px 48px;
+    }
+}
