@@ -1,3 +1,15 @@
+:root {
+    --header-height: 78px;
+}
+
+body {
+    padding-top: var(--header-height);
+}
+
+body > #hero-root {
+    margin-top: 0;
+}
+
 .header-container {
     position: fixed;
     top: 0;
@@ -114,6 +126,10 @@
 
 @media (min-width: 500px) {
 
+    :root {
+        --header-height: 127px;
+    }
+
     .header-content {
         position: relative;
         flex-wrap: wrap;
@@ -161,6 +177,10 @@
 }
 
 @media (min-width: 1024px) {
+    :root {
+        --header-height: 86px;
+    }
+
     .header-content {
         padding: 12px 24px;
         align-items: center;
@@ -201,6 +221,10 @@
 }
 
 @media (min-width: 1400px) {
+
+    :root {
+        --header-height: 107px;
+    }
 
     .header-content {
         padding: 24px 117px;
