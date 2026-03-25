@@ -82,4 +82,11 @@
     letter-spacing: 0%;
     color: #FFFFFF;
     margin: 0;
+    display: block;
+}
+
+.request-step {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
