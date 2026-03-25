@@ -1,0 +1,85 @@
+.request-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 48px 16px;
+    gap: 24px;
+    background-image:
+        linear-gradient(
+            264.7deg,
+            rgba(45, 119, 77, 0.70) 0%,
+            rgba(45, 119, 77, 0.92) 45%,
+            rgba(10, 30, 18, 0.94) 100%
+        ),
+        url('../../assets/request.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply, normal;
+    border-radius: 16px;
+}
+
+.request-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 800px;
+}
+
+.request-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.request-title {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.00em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.request-description {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.00em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.highlight {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: Italic;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #A8DFFF;
+    margin: 0;
+}
+
+.request-description br {
+    content: "";
+    margin-bottom: 16px;
+    display: block;
+}
+
+.bold {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #FFFFFF;
+    margin: 0;
+}
