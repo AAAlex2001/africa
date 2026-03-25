@@ -100,9 +100,9 @@
     border-radius: 32px;
     font-family: 'Inter';
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 120%;
-    letter-spacing: 1%;
+    letter-spacing: 0.01em;
     text-decoration: none;
 }
 
@@ -110,7 +110,8 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    max-width: 212px;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .request-button-outline {
@@ -122,9 +123,9 @@
     border-radius: 32px;
     font-family: 'Inter';
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 120%;
-    letter-spacing: 1%;
+    letter-spacing: 0.01em;
     text-decoration: none;
 }
 
@@ -149,7 +150,6 @@
     .requests-buttons {
         flex-direction: row;
         gap: 32px;
-        max-width: none;
     }
 }
 
@@ -194,6 +194,14 @@
     .bold,
     .request-step {
         font-size: 18px;
+    }
+
+    .request-button-filled {
+        font-size: 16px;
+    }
+
+    .request-button-outline {
+        font-size: 16px;
     }
 }
 
