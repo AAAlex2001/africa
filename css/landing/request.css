@@ -110,6 +110,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    max-width: 212px;
 }
 
 .request-button-outline {
@@ -148,6 +149,7 @@
     .requests-buttons {
         flex-direction: row;
         gap: 32px;
+        max-width: none;
     }
 }
 
