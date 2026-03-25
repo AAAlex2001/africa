@@ -98,10 +98,7 @@
 }
 
 .benefits-buttons-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 8px;
+    display: contents;
 }
 
 .benefits-button {
@@ -180,9 +177,6 @@
         padding: 20px 32px;
     }
 
-    .benefits-buttons-row {
-        gap: 16px;
-    }
 }
 
 @media (min-width: 1400px) {
