@@ -41,6 +41,7 @@ async function initPage() {
     await loadComponent('#tabs-root', 'tabs.html');
     await loadComponent('#news-root', 'news.html');
     await loadComponent('#partners-root', 'partners.html');
+    await loadComponent('#contacts-root', 'contacts.html');
     await loadComponent('#footer-root', 'footer.html');
 
     initBurgerMenu();

@@ -1,0 +1,144 @@
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.contacts-title {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.contacts-card {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 16px;
+    gap: 16px;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.contacts-card-title {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: #000000;
+}
+
+.contacts-card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.contacts-organizers-block,
+.contacts-person-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contacts-organizers-links,
+.contacts-location-block,
+.contacts-person-content,
+.contacts-person-texts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contacts-organizers-links,
+.contacts-location-block {
+    gap: 8px;
+}
+
+.contacts-person-content {
+    gap: 12px;
+}
+
+.contacts-person-texts {
+    gap: 4px;
+}
+
+.contacts-organizer-link {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #27509B;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.contacts-organizer-link:hover,
+.contacts-contact-link:hover {
+    color: #376BCA;
+}
+
+.contacts-location-row,
+.contacts-metro-row,
+.contacts-contact-link {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.contacts-contact-link {
+    text-decoration: none;
+    color: #27509B;
+    transition: color 0.25s ease;
+}
+
+.contacts-icon {
+    width: 16px;
+    min-width: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px;
+}
+
+.contacts-text,
+.contacts-contact-text,
+.contacts-person-name {
+    margin: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.contacts-text {
+    font-weight: 400;
+    color: #000000;
+}
+
+.contacts-person-name {
+    font-weight: 600;
+    color: #000000;
+}
+
+.contacts-contact-text {
+    font-weight: 400;
+    color: inherit;
+}
