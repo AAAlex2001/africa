@@ -95,8 +95,7 @@
 }
 
 .contacts-location-row,
-.contacts-metro-row,
-.contacts-contact-link {
+.contacts-metro-row {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -104,6 +103,10 @@
 }
 
 .contacts-contact-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
     text-decoration: none;
     color: #27509B;
     transition: color 0.25s ease;
@@ -115,7 +118,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding-top: 1px;
 }
 
 .contacts-text,
