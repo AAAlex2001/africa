@@ -45,10 +45,6 @@
     transition: background-color 0.25s ease;
 }
 
-.partners-arrow:hover {
-    background-color: #D6E4F7;
-}
-
 .partners-slider {
     width: 100%;
     height: 318px;
@@ -114,4 +110,11 @@
         font-size: 32px;
     }
     
+}
+
+@media (min-width: 1400px) {
+
+    .partners-arrow:hover {
+        background-color: #D6E4F7;
+    }
 }
