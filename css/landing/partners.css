@@ -91,14 +91,6 @@
     transition: color 0.25s ease;
 }
 
-.partners-slide:hover .partners-logo {
-    transform: scale(1.05);
-}
-
-.partners-slide:hover .partners-name {
-    color: #376BCA;
-}
-
 @media (min-width: 500px) {
 
     .partners-container {
@@ -116,5 +108,13 @@
 
     .partners-arrow:hover {
         background-color: #D6E4F7;
+    }
+
+    .partners-slide:hover .partners-logo {
+        transform: scale(1.05);
+    }
+
+    .partners-slide:hover .partners-name {
+        color: #376BCA;
     }
 }

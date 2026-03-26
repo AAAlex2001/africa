@@ -52,10 +52,6 @@
     will-change: transform;
 }
 
-.news-item:hover .news-image {
-    transform: scale(1.04);
-}
-
 .news-date {
     font-family: 'Inter';
     font-style: normal;
@@ -159,6 +155,10 @@
 
     .news-image {
         height: 153px;
+    }
+
+    .news-item:hover .news-image {
+        transform: scale(1.04);
     }
 }
 
