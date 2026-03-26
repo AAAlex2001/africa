@@ -28,6 +28,13 @@
     border-radius: 16px;
 }
 
+.contacts-layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .contacts-card-title {
     margin: 0;
     font-family: 'Inter';
@@ -44,6 +51,19 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+}
+
+.contacts-map-card {
+    width: 100%;
+    min-height: 320px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.contacts-map {
+    width: 100%;
+    min-height: 320px;
 }
 
 .contacts-organizers-block,
@@ -162,6 +182,25 @@
         padding: 32px 24px;
     }
 
+}
+
+@media (min-width: 1024px) {
+
+    .contacts-layout {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .contacts-card,
+    .contacts-map-card {
+        flex: 0 0 calc(50% - 2px);
+        max-width: calc(50% - 2px);
+    }
+
+    .contacts-map,
+    .contacts-map-card {
+        min-height: 100%;
+    }
 }
 
 @media (min-width: 1400px) {

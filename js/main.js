@@ -30,6 +30,37 @@ function initBurgerMenu() {
     });
 }
 
+function initContactsMap() {
+    const mapElement = document.getElementById('contacts-map');
+    if (!mapElement || !window.ymaps || mapElement.dataset.initialized === 'true') return;
+
+    ymaps.ready(function () {
+        if (mapElement.dataset.initialized === 'true') return;
+
+        var myMap = new ymaps.Map('contacts-map', {
+            center: [59.9363, 30.2482],
+            zoom: 13,
+            controls: ['zoomControl']
+        });
+
+        var label1 = new ymaps.Placemark([59.9418, 30.2303], {
+            iconContent: 'МФК Горный'
+        }, {
+            preset: 'islands#orangeStretchyIcon'
+        });
+
+        var label2 = new ymaps.Placemark([59.9308, 30.2661], {
+            iconContent: 'Горный университет'
+        }, {
+            preset: 'islands#blueStretchyIcon'
+        });
+
+        myMap.geoObjects.add(label1);
+        myMap.geoObjects.add(label2);
+        mapElement.dataset.initialized = 'true';
+    });
+}
+
 async function initPage() {
     await loadComponent('#header-root', 'header.html');
     await loadComponent('#burger-slot', 'burger.html');
@@ -49,6 +80,7 @@ async function initPage() {
     highlightNearestDate('.tabs-dates');
     highlightNearestDate('.tabs-programs');
     initPartnersSlider();
+    initContactsMap();
 }
 
 initPage();
