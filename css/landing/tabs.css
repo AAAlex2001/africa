@@ -1,13 +1,12 @@
 
+.tabs-head {
+    display: flex;
+}
 
-
-
-
-
-
-
-
-
+.tabs-dates-title,
+.tabs-programs-title {
+    cursor: pointer;
+}
 
 .tabs-dates,
 .tabs-programs {

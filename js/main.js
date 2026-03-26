@@ -42,6 +42,7 @@ async function initPage() {
     await loadComponent('#footer-root', 'footer.html');
 
     initBurgerMenu();
+    tabsToggler();
 }
 
 initPage();
