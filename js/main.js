@@ -5,6 +5,18 @@ async function loadComponent(selector, path) {
     const html = await res.text();
     const doc = new DOMParser().parseFromString(html, 'text/html');
     el.innerHTML = doc.body.innerHTML;
+
+    if (typeof applyTranslations === 'function') {
+        applyTranslations(el);
+    }
+
+    if (typeof initLanguageControls === 'function') {
+        initLanguageControls();
+    }
+
+    if (typeof updateBurgerButtonLabel === 'function') {
+        updateBurgerButtonLabel();
+    }
 }
 
 function initBurgerMenu() {
@@ -12,6 +24,10 @@ function initBurgerMenu() {
     const burgerMenu = document.querySelector('.burger-menu');
 
     if (!burgerButton || !burgerMenu) return;
+
+    if (typeof updateBurgerButtonLabel === 'function') {
+        updateBurgerButtonLabel();
+    }
 
     burgerButton.addEventListener('click', () => {
         const isOpen = burgerButton.classList.toggle('is-open');
@@ -27,36 +43,60 @@ function initBurgerMenu() {
             document.body.style.overflow = '';
             document.body.style.height = '';
         }
+
+        if (typeof updateBurgerButtonLabel === 'function') {
+            updateBurgerButtonLabel();
+        }
     });
+}
+
+let contactsMapInstance = null;
+let contactsMapLabels = null;
+
+function updateContactsMapLabels() {
+    if (!contactsMapLabels || typeof getTranslation !== 'function') return;
+
+    contactsMapLabels.label1.properties.set('iconContent', getTranslation('contacts.mapLabel1'));
+    contactsMapLabels.label2.properties.set('iconContent', getTranslation('contacts.mapLabel2'));
 }
 
 function initContactsMap() {
     const mapElement = document.getElementById('contacts-map');
-    if (!mapElement || !window.ymaps || mapElement.dataset.initialized === 'true') return;
+    if (!mapElement || !window.ymaps) return;
+
+    if (contactsMapInstance) {
+        updateContactsMapLabels();
+        return;
+    }
 
     ymaps.ready(function () {
-        if (mapElement.dataset.initialized === 'true') return;
+        if (contactsMapInstance) {
+            updateContactsMapLabels();
+            return;
+        }
 
-        var myMap = new ymaps.Map('contacts-map', {
+        contactsMapInstance = new ymaps.Map('contacts-map', {
             center: [59.9363, 30.2482],
             zoom: 13,
             controls: ['zoomControl']
         });
 
-        var label1 = new ymaps.Placemark([59.9418, 30.2303], {
-            iconContent: 'МФК Горный'
-        }, {
-            preset: 'islands#orangeStretchyIcon'
-        });
+        contactsMapLabels = {
+            label1: new ymaps.Placemark([59.9418, 30.2303], {
+                iconContent: ''
+            }, {
+                preset: 'islands#orangeStretchyIcon'
+            }),
+            label2: new ymaps.Placemark([59.9308, 30.2661], {
+                iconContent: ''
+            }, {
+                preset: 'islands#blueStretchyIcon'
+            })
+        };
 
-        var label2 = new ymaps.Placemark([59.9308, 30.2661], {
-            iconContent: 'Горный университет'
-        }, {
-            preset: 'islands#blueStretchyIcon'
-        });
-
-        myMap.geoObjects.add(label1);
-        myMap.geoObjects.add(label2);
+        contactsMapInstance.geoObjects.add(contactsMapLabels.label1);
+        contactsMapInstance.geoObjects.add(contactsMapLabels.label2);
+        updateContactsMapLabels();
         mapElement.dataset.initialized = 'true';
     });
 }
@@ -74,6 +114,14 @@ async function initPage() {
     await loadComponent('#partners-root', 'partners.html');
     await loadComponent('#contacts-root', 'contacts.html');
     await loadComponent('#footer-root', 'footer.html');
+
+    if (typeof initLanguageControls === 'function') {
+        initLanguageControls();
+    }
+
+    if (typeof applyTranslations === 'function') {
+        applyTranslations(document);
+    }
 
     initBurgerMenu();
     tabsToggler();

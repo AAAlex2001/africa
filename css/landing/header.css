@@ -91,17 +91,14 @@ body > #hero-root {
     font-weight: 400;
     letter-spacing: 0.01em;
     font-style: Regular;
+    color: #000000;
     transition: color 0.25s ease;
 }
 .header-language a:hover {
     color: #376BCA;
 }
 
-.header-button-ru {
-    color: #000000;
-}
-
-.header-button-en {
+.header-language a.is-active {
     color: #27509B;
 }
 

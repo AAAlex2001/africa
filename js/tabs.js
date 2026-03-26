@@ -44,6 +44,17 @@ function parseRussianDate(dateStr) {
     return new Date(year, month, day);
 }
 
+function parseTabDate(timeDiv) {
+    if (!timeDiv) return null;
+
+    const dateValue = timeDiv.dataset.date;
+    if (dateValue) {
+        return new Date(dateValue + 'T00:00:00');
+    }
+
+    return parseRussianDate(timeDiv.textContent.trim());
+}
+
 function getHighlightedDateItem(blockSelector) {
     const items = document.querySelectorAll(blockSelector + ' .tabs-item');
     const today = new Date();
@@ -51,14 +62,11 @@ function getHighlightedDateItem(blockSelector) {
 
     let lastPast = null;
     let lastPastItem = null;
-    let nearestFuture = null;
-    let nearestFutureItem = null;
 
     items.forEach(item => {
         const timeDiv = item.querySelector('.tabs-time');
         if (!timeDiv) return;
-        const dateText = timeDiv.textContent.trim();
-        const eventDate = parseRussianDate(dateText);
+        const eventDate = parseTabDate(timeDiv);
         if (!eventDate) return;
         eventDate.setHours(0, 0, 0, 0);
 
@@ -66,11 +74,6 @@ function getHighlightedDateItem(blockSelector) {
             if (!lastPast || eventDate > lastPast) {
                 lastPast = eventDate;
                 lastPastItem = item;
-            }
-        } else {
-            if (!nearestFuture || eventDate < nearestFuture) {
-                nearestFuture = eventDate;
-                nearestFutureItem = item;
             }
         }
     });
