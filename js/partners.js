@@ -4,9 +4,17 @@ function initPartnersSlider() {
 
     const slider = new KeenSlider(sliderEl, {
         loop: true,
-        slides: {
+        slides: { 
             perView: 1,
             spacing: 4,
+        },
+        breakpoints: {
+            '(min-width: 770px)': {
+                slides: { perView: 2, spacing: 4 },
+            },
+            '(min-width: 1400px)': {
+                slides: { perView: 3, spacing: 4 },
+            },
         },
     });
 
