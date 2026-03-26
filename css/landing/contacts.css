@@ -55,7 +55,7 @@
 
 .contacts-map-card {
     width: 100%;
-    min-height: 320px;
+    height: 320px;
     background: #FFFFFF;
     border-radius: 16px;
     overflow: hidden;
@@ -63,7 +63,7 @@
 
 .contacts-map {
     width: 100%;
-    min-height: 320px;
+    height: 320px;
 }
 
 .contacts-organizers-block,
@@ -187,19 +187,15 @@
 @media (min-width: 1024px) {
 
     .contacts-layout {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: stretch;
     }
 
     .contacts-card,
     .contacts-map-card {
-        flex: 0 0 calc(50% - 2px);
-        max-width: calc(50% - 2px);
-    }
-
-    .contacts-map,
-    .contacts-map-card {
-        min-height: 100%;
+        width: 100%;
+        max-width: none;
     }
 }
 
