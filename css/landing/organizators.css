@@ -140,6 +140,7 @@
 
     .organizators-accordion-item:hover {
         transform: translateY(-5px);
+        will-change: transform;
     }
 
     .organizators-accordion:has(.organizators-accordion-item:hover) .organizators-accordion-item:not(:hover) {
