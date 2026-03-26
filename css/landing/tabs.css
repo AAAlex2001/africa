@@ -29,6 +29,12 @@
     letter-spacing: 0.00em;
     width: 100%;
     text-align: center;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.tabs-dates-title:not(.active):hover,
+.tabs-programs-title:not(.active):hover {
+    background: #D6E4F7;
 }
 
 .tabs-dates-title.active,
@@ -46,6 +52,35 @@
 .tabs-programs.active {
     display: block;
 }
+
+@keyframes itemFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tabs-dates.active .tabs-item,
+.tabs-programs.active .tabs-item {
+    animation: itemFadeIn 0.35s ease both;
+}
+
+.tabs-dates.active .tabs-item:nth-child(1),
+.tabs-programs.active .tabs-item:nth-child(1) { animation-delay: 0.00s; }
+.tabs-dates.active .tabs-item:nth-child(2),
+.tabs-programs.active .tabs-item:nth-child(2) { animation-delay: 0.07s; }
+.tabs-dates.active .tabs-item:nth-child(3),
+.tabs-programs.active .tabs-item:nth-child(3) { animation-delay: 0.14s; }
+.tabs-dates.active .tabs-item:nth-child(4),
+.tabs-programs.active .tabs-item:nth-child(4) { animation-delay: 0.21s; }
+.tabs-dates.active .tabs-item:nth-child(5),
+.tabs-programs.active .tabs-item:nth-child(5) { animation-delay: 0.28s; }
+.tabs-dates.active .tabs-item:nth-child(6),
+.tabs-programs.active .tabs-item:nth-child(6) { animation-delay: 0.35s; }
 
 .tabs-content {
     display: flex;
