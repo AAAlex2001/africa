@@ -43,6 +43,8 @@ async function initPage() {
 
     initBurgerMenu();
     tabsToggler();
+    highlightNearestDate('.tabs-dates');
+    highlightNearestDate('.tabs-programs');
 }
 
 initPage();
