@@ -40,12 +40,14 @@ async function initPage() {
     await loadComponent('#benefits-root', 'benefits.html');
     await loadComponent('#tabs-root', 'tabs.html');
     await loadComponent('#news-root', 'news.html');
+    await loadComponent('#partners-root', 'partners.html');
     await loadComponent('#footer-root', 'footer.html');
 
     initBurgerMenu();
     tabsToggler();
     highlightNearestDate('.tabs-dates');
     highlightNearestDate('.tabs-programs');
+    initPartnersSlider();
 }
 
 initPage();
