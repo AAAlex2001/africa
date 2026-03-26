@@ -1,11 +1,40 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 
 .tabs-head {
     display: flex;
+    gap: 4px;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
 }
 
 .tabs-dates-title,
 .tabs-programs-title {
     cursor: pointer;
+    background: #FFFFFF;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    padding: 24px 20px;
+    margin: 0;
+    font-weight: 600;
+    font-style: Bold;
+    font-family: 'Inter';
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.00em;
+    width: 100%;
+    text-align: center;
+}
+
+.tabs-dates-title,
+.tabs-programs-title > .active {
+    background: #27509B;
+    color: #FFFFFF;
 }
 
 .tabs-dates,
