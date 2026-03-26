@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+.tabs-dates,
+.tabs-programs {
+    display: none;
+}
+
+.tabs-dates.active,
+.tabs-programs.active {
+    display: block;
+}
