@@ -197,6 +197,11 @@
         width: 100%;
         max-width: none;
     }
+
+    .contacts-map-card,
+    .contacts-map {
+        height: 100%;
+    }
 }
 
 @media (min-width: 1400px) {
