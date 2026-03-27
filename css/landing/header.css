@@ -206,6 +206,7 @@ body > #hero-root {
         border-top: 0;
         order: 1;
         margin: 0 0;
+        gap: 32px
     }
 
     .header-language {
