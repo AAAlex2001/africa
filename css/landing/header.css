@@ -91,7 +91,7 @@ body > #hero-root {
     font-weight: 400;
     letter-spacing: 0.01em;
     font-style: Regular;
-    color: #000000;
+    color: #27509B;
     transition: color 0.25s ease;
 }
 .header-language a:hover {
@@ -99,7 +99,7 @@ body > #hero-root {
 }
 
 .header-language a.is-active {
-    color: #27509B;
+    color: #000000;
 }
 
 .header-button-register {
