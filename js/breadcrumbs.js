@@ -5,11 +5,13 @@ function breadcrumbs() {
     if (!breadcrumbsContainer) return;
 
     breadcrumbsContainer.innerHTML = '';
+    const currentKey = breadcrumbsContainer.dataset.breadcrumbCurrent || 'breadcrumbs.about';
+    const homeHref = breadcrumbsContainer.dataset.breadcrumbHomeHref || '../landing/main.html';
 
     const homeLink = document.createElement('a');
-    homeLink.href = '../landing/main.html';
+    homeLink.href = homeHref;
     homeLink.className = 'breadcrumbs-link';
-    homeLink.textContent = 'Главная';
+    homeLink.setAttribute('data-i18n', 'breadcrumbs.home');
 
     const separator = document.createElement('span');
     separator.className = 'breadcrumbs-separator';
@@ -17,9 +19,13 @@ function breadcrumbs() {
 
     const currentPage = document.createElement('span');
     currentPage.className = 'breadcrumbs-current';
-    currentPage.textContent = 'О форуме-конкурсе';
+    currentPage.setAttribute('data-i18n', currentKey);
 
     breadcrumbsContainer.appendChild(homeLink);
     breadcrumbsContainer.appendChild(separator);
     breadcrumbsContainer.appendChild(currentPage);
+
+    if (typeof applyTranslations === 'function') {
+        applyTranslations(breadcrumbsContainer);
+    }
 }

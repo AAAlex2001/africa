@@ -1,0 +1,144 @@
+.partners-request-section {
+	width: 100%;
+}
+
+body > #partners-request-root {
+	margin-top: 16px;
+}
+
+.partners-request-container {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	padding: 48px 16px;
+	background-image:
+		linear-gradient(
+			264.7deg,
+			rgba(45, 119, 77, 0.7) 0%,
+			rgba(45, 119, 77, 0.92) 45%,
+			rgba(10, 30, 18, 0.94) 100%
+		),
+		url('../../assets/request.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply, normal;
+	border-radius: 16px;
+}
+
+.partners-request-content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 32px;
+	max-width: 800px;
+}
+
+.partners-request-texts {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 32px;
+	width: 100%;
+}
+
+.partners-request-title {
+	margin: 0;
+	width: 100%;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 120%;
+	text-transform: uppercase;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #FFFFFF;
+}
+
+.partners-request-description {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0;
+	width: 100%;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 140%;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #FFFFFF;
+}
+
+.partners-request-description-line {
+	display: block;
+}
+
+.partners-request-contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	width: 100%;
+}
+
+.partners-request-contacts-title {
+	margin: 0;
+	width: 100%;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 140%;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #FFFFFF;
+}
+
+.partners-request-contact-link {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	width: 100%;
+	text-decoration: none;
+	color: #A8DFFF;
+	transition: color 0.25s ease;
+}
+
+.partners-request-contact-link:hover {
+	color: #D7F0E2;
+}
+
+.partners-request-contact-icon {
+	width: 16px;
+	min-width: 16px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.partners-request-contact-text {
+	margin: 0;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: inherit;
+}
+
+@media (min-width: 770px) {
+	body > #partners-request-root {
+		margin-top: 24px;
+	}
+
+	.partners-request-container {
+		padding: 64px 24px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.partners-request-container {
+		padding: 64px 48px;
+	}
+}
