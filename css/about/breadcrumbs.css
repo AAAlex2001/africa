@@ -3,9 +3,18 @@
     flex-direction: row;
     align-items: center;
     gap: 4px;
-    width: 100%;
+    width: fit-content;
+    max-width: 100%;
     padding: 12px 0;
     border-radius: 16px 16px 0 0;
+}
+
+body > #breadcrumbs {
+    margin-top: 0;
+}
+
+body > #accordion-root {
+    margin-top: 16px;
 }
 
 .breadcrumbs,
@@ -28,7 +37,61 @@
     text-decoration: none;
 }
 
+.breadcrumbs-link:visited {
+    color: #003366;
+}
+
 .breadcrumbs-separator,
 .breadcrumbs-current {
     color: #7A7E84;
+}
+
+@media (min-width: 500px) {
+    body > #breadcrumbs {
+        margin-top: 0;
+    }
+
+    body > #accordion-root {
+        margin-top: 16px;
+    }
+}
+
+@media (min-width: 770px) {
+    body > #breadcrumbs {
+        margin-top: 0;
+    }
+
+    body > #accordion-root {
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body > #breadcrumbs {
+        margin-top: 0;
+    }
+
+    body > #accordion-root {
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 1400px) {
+    body > #breadcrumbs {
+        margin-top: 0;
+    }
+
+    body > #accordion-root {
+        margin-top: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    body > #breadcrumbs {
+        margin-top: 0;
+    }
+
+    body > #accordion-root {
+        margin-top: 24px;
+    }
 }
