@@ -19,6 +19,8 @@ async function loadComponent(selector, path) {
     }
 }
 
+const componentBase = window.COMPONENT_BASE || '';
+
 function initBurgerMenu() {
     const burgerButton = document.querySelector('.burger-button');
     const burgerMenu = document.querySelector('.burger-menu');
@@ -102,18 +104,18 @@ function initContactsMap() {
 }
 
 async function initPage() {
-    await loadComponent('#header-root', 'header.html');
-    await loadComponent('#burger-slot', 'burger.html');
-    await loadComponent('#hero-root', 'hero.html');
-    await loadComponent('#organizators-root', 'organizators.html');
-    await loadComponent('#mission-root', 'mission.html');
-    await loadComponent('#request-root', 'request.html');
-    await loadComponent('#benefits-root', 'benefits.html');
-    await loadComponent('#tabs-root', 'tabs.html');
-    await loadComponent('#news-root', 'news.html');
-    await loadComponent('#partners-root', 'partners.html');
-    await loadComponent('#contacts-root', 'contacts.html');
-    await loadComponent('#footer-root', 'footer.html');
+    await loadComponent('#header-root', `${componentBase}header.html`);
+    await loadComponent('#burger-slot', `${componentBase}burger.html`);
+    await loadComponent('#hero-root', `${componentBase}hero.html`);
+    await loadComponent('#organizators-root', `${componentBase}organizators.html`);
+    await loadComponent('#mission-root', `${componentBase}mission.html`);
+    await loadComponent('#request-root', `${componentBase}request.html`);
+    await loadComponent('#benefits-root', `${componentBase}benefits.html`);
+    await loadComponent('#tabs-root', `${componentBase}tabs.html`);
+    await loadComponent('#news-root', `${componentBase}news.html`);
+    await loadComponent('#partners-root', `${componentBase}partners.html`);
+    await loadComponent('#contacts-root', `${componentBase}contacts.html`);
+    await loadComponent('#footer-root', `${componentBase}footer.html`);
 
     if (typeof initLanguageControls === 'function') {
         initLanguageControls();
@@ -124,11 +126,22 @@ async function initPage() {
     }
 
     initBurgerMenu();
-    tabsToggler();
-    highlightNearestDate('.tabs-dates');
-    highlightNearestDate('.tabs-programs');
-    initPartnersSlider();
-    initContactsMap();
+    if (typeof tabsToggler === 'function') {
+        tabsToggler();
+    }
+
+    if (typeof highlightNearestDate === 'function') {
+        highlightNearestDate('.tabs-dates');
+        highlightNearestDate('.tabs-programs');
+    }
+
+    if (typeof initPartnersSlider === 'function') {
+        initPartnersSlider();
+    }
+
+    if (typeof initContactsMap === 'function') {
+        initContactsMap();
+    }
 }
 
 initPage();
