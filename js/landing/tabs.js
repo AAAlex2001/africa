@@ -70,7 +70,7 @@ function getHighlightedDateItem(blockSelector) {
         if (!eventDate) return;
         eventDate.setHours(0, 0, 0, 0);
 
-        if (eventDate <= today) {
+        if (eventDate < today) {
             if (!lastPast || eventDate > lastPast) {
                 lastPast = eventDate;
                 lastPastItem = item;

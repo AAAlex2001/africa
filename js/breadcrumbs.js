@@ -1,19 +1,25 @@
 //хлебные крошки
 
 function breadcrumbs() {
-    var url = window.location.href;
-    var urlParts = url.split('/');
-    var breadcrumbsContainer = document.getElementById('breadcrumbs');
+    const breadcrumbsContainer = document.getElementById('breadcrumbs');
+    if (!breadcrumbsContainer) return;
+
     breadcrumbsContainer.innerHTML = '';
 
-    let path = '';
-    urlParts.forEach(function(part, index) {
-        if (index > 2) {
-            path += '/' + part;
-            var breadcrumb = document.createElement('a');
-            breadcrumb.href = path;
-            breadcrumb.textContent = part;
-            breadcrumbsContainer.appendChild(breadcrumb);
-        }
-    });
+    const homeLink = document.createElement('a');
+    homeLink.href = '../landing/main.html';
+    homeLink.className = 'breadcrumbs-link';
+    homeLink.textContent = 'Главная';
+
+    const separator = document.createElement('span');
+    separator.className = 'breadcrumbs-separator';
+    separator.textContent = '/';
+
+    const currentPage = document.createElement('span');
+    currentPage.className = 'breadcrumbs-current';
+    currentPage.textContent = 'О форуме-конкурсе';
+
+    breadcrumbsContainer.appendChild(homeLink);
+    breadcrumbsContainer.appendChild(separator);
+    breadcrumbsContainer.appendChild(currentPage);
 }

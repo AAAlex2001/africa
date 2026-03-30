@@ -1,0 +1,44 @@
+.about-navigation-section {
+    width: 100%;
+}
+
+.about-navigation,
+.about-navigation * {
+    box-sizing: border-box;
+    font-family: 'Inter';
+    margin: 0;
+}
+
+.about-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+}
+
+.about-navigation-button {
+    width: 100%;
+    justify-content: center;
+}
+
+.about-navigation-button-download {
+    min-height: 66px;
+}
+
+@media (min-width: 1024px) {
+    .about-navigation {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .about-navigation-button {
+        flex: 1 1 0;
+        width: auto;
+        max-width: none;
+    }
+
+    .about-navigation-button-download {
+        min-height: 59px;
+    }
+}

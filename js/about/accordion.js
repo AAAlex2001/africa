@@ -1,15 +1,33 @@
 function toggleAccordion() {
-    const accordions = document.querySelectorAll('.accordion');
-    if (accordions.length === 0) return;
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    if (accordionItems.length === 0) return;
 
-    accordions.forEach(accordion => {
-        const title = accordion.querySelector('.accordion-title');
-        const content = accordion.querySelector('.accordion-content');
+    accordionItems.forEach((item) => {
+        const title = item.querySelector('.accordion-header');
+        const content = item.querySelector('.accordion-content');
+        const collapseButton = item.querySelector('.accordion-collapse-button');
         if (!title || !content) return;
 
-        title.addEventListener('click', () => {
-            const isOpen = title.classList.toggle('is-open');
+        content.style.maxHeight = '0px';
+
+        function setOpenState(isOpen) {
+            title.classList.toggle('is-open', isOpen);
+            title.setAttribute('aria-expanded', String(isOpen));
             content.classList.toggle('is-open', isOpen);
+            content.style.maxHeight = isOpen ? `${content.scrollHeight}px` : '0px';
+        }
+
+        title.addEventListener('click', () => {
+            const isOpen = title.classList.contains('is-open');
+            setOpenState(!isOpen);
         });
+
+        if (collapseButton) {
+            collapseButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                setOpenState(false);
+            });
+        }
     });
 }
