@@ -2,6 +2,13 @@
 	width: 100%;
 }
 
+.participants-nominations-section {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
 body > #participants-request-root {
 	margin-top: 16px;
 }
@@ -94,6 +101,10 @@ body > #participants-request-root {
 	text-underline-offset: 2px;
 }
 
+.participants-request-anchor {
+	text-decoration-color: currentColor;
+}
+
 .participants-request-description-line {
 	display: block;
 }
@@ -165,6 +176,10 @@ body > #participants-request-root {
 @media (min-width: 500px) {
 	.participants-request-title {
 		font-size: 32px;
+	}
+
+	.participants-nominations-section {
+		gap: 32px;
 	}
 }
 
