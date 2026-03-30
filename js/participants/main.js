@@ -1,6 +1,7 @@
 async function loadComponent(selector, path) {
     const el = document.querySelector(selector);
     if (!el) return;
+
     const res = await fetch(path);
     const html = await res.text();
     const doc = new DOMParser().parseFromString(html, 'text/html');
@@ -125,14 +126,14 @@ function initContactsMap() {
 async function initPage() {
     await loadComponent('#header-root', `${componentBase}header.html`);
     await loadComponent('#burger-slot', `${componentBase}burger.html`);
-    await loadComponent('#hero-root', `${componentBase}hero.html`);
-    await loadComponent('#organizators-root', `${componentBase}organizators.html`);
-    await loadComponent('#mission-root', `${componentBase}mission.html`);
-    await loadComponent('#request-root', `${componentBase}request.html`);
-    await loadComponent('#benefits-root', `${componentBase}benefits.html`);
+
+    if (typeof breadcrumbs === 'function') {
+        breadcrumbs();
+    }
+
+    await loadComponent('#participants-request-root', 'request.html');
+    await loadComponent('#participants-accordion-root', 'accordion.html');
     await loadComponent('#tabs-root', `${componentBase}tabs.html`);
-    await loadComponent('#news-root', `${componentBase}news.html`);
-    await loadComponent('#partners-root', `${componentBase}partners.html`);
     await loadComponent('#contacts-root', `${componentBase}contacts.html`);
     await loadComponent('#footer-root', `${componentBase}footer.html`);
 
@@ -145,6 +146,11 @@ async function initPage() {
     }
 
     initBurgerMenu();
+
+    if (typeof toggleAccordion === 'function') {
+        toggleAccordion();
+    }
+
     if (typeof tabsToggler === 'function') {
         tabsToggler();
     }
@@ -152,10 +158,6 @@ async function initPage() {
     if (typeof highlightNearestDate === 'function') {
         highlightNearestDate('.tabs-dates');
         highlightNearestDate('.tabs-programs');
-    }
-
-    if (typeof initPartnersSlider === 'function') {
-        initPartnersSlider();
     }
 
     if (typeof initContactsMap === 'function') {

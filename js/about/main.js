@@ -28,6 +28,19 @@ function initBurgerMenu() {
 
     if (!burgerButton || !burgerMenu) return;
 
+    function closeBurgerMenu() {
+        burgerButton.classList.remove('is-open');
+        burgerMenu.classList.remove('is-open');
+        burgerButton.setAttribute('aria-expanded', 'false');
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
+        document.body.style.height = '';
+
+        if (typeof updateBurgerButtonLabel === 'function') {
+            updateBurgerButtonLabel();
+        }
+    }
+
     if (typeof updateBurgerButtonLabel === 'function') {
         updateBurgerButtonLabel();
     }
@@ -50,6 +63,12 @@ function initBurgerMenu() {
         if (typeof updateBurgerButtonLabel === 'function') {
             updateBurgerButtonLabel();
         }
+    });
+
+    burgerMenu.querySelectorAll('.burger-link, .burger-register-link').forEach((link) => {
+        link.addEventListener('click', () => {
+            closeBurgerMenu();
+        });
     });
 }
 
