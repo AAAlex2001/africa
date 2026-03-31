@@ -18,8 +18,8 @@ body > #participants-request-root {
 	width: 100%;
 	box-sizing: border-box;
 	display: flex;
-	flex-direction: row;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
 	padding: 48px 16px;
 	background:
 		linear-gradient(87.52deg, #0E2C1B 0%, #369D62 100%),
@@ -29,6 +29,7 @@ body > #participants-request-root {
 	background-repeat: no-repeat;
 	background-blend-mode: multiply, normal;
 	border-radius: 16px;
+	gap: 32px;
 }
 
 .participants-request-content {
@@ -154,23 +155,58 @@ body > #participants-request-root {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	align-self: flex-start;
-	padding: 20px 32px;
-	gap: 24px;
-	border: 1px solid #FFFFFF;
+	gap: 8px;
+	padding: 16px 24px;
+	border: 1px solid #27509B;
 	border-radius: 32px;
-	background: #FFFFFF;
-	color: #27509B;
+	background: #27509B;
+	color: #FFFFFF;
 	text-decoration: none;
 	font-weight: 700;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 120%;
 	letter-spacing: 0.01em;
-	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	box-sizing: border-box;
+	width: fit-content;
+	max-width: 100%;
+	transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .participants-request-button:hover {
-	color: #376BCA;
+	background: #376BCA;
+	border-color: #376BCA;
+}
+
+.participants-request-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 8px;
+	width: 100%;
+}
+
+.participants-request-buttons-row {
+	display: contents;
+}
+
+.participants-request-button-wide {
+	width: 100%;
+	justify-content: space-between;
+}
+
+.participants-request-button-icon {
+	flex: 0 0 16px;
+	width: 16px;
+	height: 16px;
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 12V1M8 12L3 6.86381M8 12L13 6.86381' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 12V15H15V12' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px 16px;
+	transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.participants-request-button:hover .participants-request-button-icon {
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 12V1M8 12L3 6.86381M8 12L13 6.86381' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 12V15H15V12' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 @media (min-width: 500px) {
@@ -180,6 +216,11 @@ body > #participants-request-root {
 
 	.participants-nominations-section {
 		gap: 32px;
+	}
+
+	.participants-request-button-wide {
+		width: fit-content;
+		justify-content: center;
 	}
 }
 
@@ -194,6 +235,18 @@ body > #participants-request-root {
 
 	.participants-request-content {
 		gap: 32px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.participants-request-buttons {
+		gap: 16px;
+	}
+
+	.participants-request-button {
+		font-size: 16px;
+		line-height: 19px;
+		padding: 20px 32px;
 	}
 }
 

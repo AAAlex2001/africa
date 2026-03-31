@@ -146,13 +146,22 @@
 
     .tabs-content {
         padding: 24px;
+        gap: 8px;
     }
 
     .tabs-item {
         display: grid;
-        grid-template-columns: 200px 1fr;
+        grid-template-columns: 1fr;
         gap: 8px;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    .tabs-dates .tabs-item {
+        grid-template-columns: max-content 1fr;
+    }
+
+    .tabs-programs .tabs-item {
+        grid-template-columns: 190px 1fr;
     }
 
     .tabs-time {
