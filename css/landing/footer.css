@@ -60,11 +60,30 @@
         margin-right: -117px;
         padding: 48px 117px;
     }
+}
+
+@media (min-width: 1536px) {
+    .footer-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+        justify-content: space-between;
+    }
 
     .footer-links {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        display: contents;
+    }
+
+    .footer-copy {
+        order: 1;
+    }
+
+    .footer-link[data-i18n='footer.link2'] {
+        order: 2;
+    }
+
+    .footer-link[data-i18n='footer.link3'] {
+        order: 3;
     }
 }
 
