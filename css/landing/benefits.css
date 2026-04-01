@@ -198,6 +198,7 @@
         padding: 20px 32px;
         min-height: 59px;
         height: 59px;
+        white-space: nowrap;
     }
 
 }
