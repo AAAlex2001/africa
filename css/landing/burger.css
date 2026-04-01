@@ -79,7 +79,7 @@
     gap: 32px;
 }
 
-.burger-menu-nav {
+.burger-menu nav {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -88,7 +88,7 @@
 	width: 100%;
 }
 
-.burger-link {
+.burger-menu nav a {
 	color: #27509B;
 	text-decoration: none;
 	font-family: 'Inter';
@@ -100,7 +100,8 @@
     font-style: Regular;
     transition: color 0.25s ease;
 }
-.burger-link:hover {
+
+.burger-menu nav a:hover {
 	color: #376BCA;
 }
 

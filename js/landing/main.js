@@ -64,7 +64,7 @@ function initBurgerMenu() {
         }
     });
 
-    burgerMenu.querySelectorAll('.burger-link, .burger-register-link').forEach((link) => {
+    burgerMenu.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', () => {
             closeBurgerMenu();
         });
