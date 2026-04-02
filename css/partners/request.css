@@ -61,6 +61,7 @@ body > #partners-request-root {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0;
+	row-gap: 8px;
 	width: 100%;
 	font-family: 'Inter';
 	font-style: normal;
