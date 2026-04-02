@@ -35,9 +35,28 @@
 
 .organizators-accordion-item {
     display: none;
+    position: relative;
+    overflow: hidden;
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.organizators-accordion-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #D7F0E2;
+    opacity: 0;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.organizators-accordion-content {
+    position: relative;
+    z-index: 2;
 }
 
 .organizators-accordion-item.open {
@@ -143,9 +162,15 @@
         will-change: transform;
     }
 
-    .organizators-accordion:has(.organizators-accordion-item:hover) .organizators-accordion-item:not(:hover) {
-        filter: blur(2px) brightness(0.82);
+    .organizators-accordion:has(.organizators-accordion-item:hover) .organizators-accordion-item:not(:hover),
+    .organizators-accordion:hover .organizators-accordion-item:not(:hover) {
+        filter: blur(2px);
         opacity: 0.7;
+    }
+
+    .organizators-accordion:has(.organizators-accordion-item:hover) .organizators-accordion-item:not(:hover)::after,
+    .organizators-accordion:hover .organizators-accordion-item:not(:hover)::after {
+        opacity: 0.55;
     }
 
     .organizators-accordion-item:hover {
