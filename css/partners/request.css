@@ -73,6 +73,20 @@ body > #partners-request-root {
 
 .partners-request-description-line {
 	display: block;
+	position: relative;
+	padding-left: 14px;
+}
+
+.partners-request-description-line::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.7em;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: #FFFFFF;
+	transform: translateY(-50%);
 }
 
 .partners-request-contacts {
