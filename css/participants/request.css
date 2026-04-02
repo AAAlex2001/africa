@@ -151,6 +151,76 @@ body > #participants-request-root {
 	color: #A8DFFF;
 }
 
+.participants-request-documents {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-self: stretch;
+	gap: 16px;
+	width: 100%;
+	padding: 40px 32px;
+	box-sizing: border-box;
+	background: rgba(168, 223, 255, 0.3);
+	border-radius: 32px;
+}
+
+.participants-request-documents-title {
+	margin: 0;
+	width: 100%;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 140%;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #FFFFFF;
+}
+
+.participants-request-documents-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	width: 100%;
+}
+
+.participants-request-document-link {
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+	width: fit-content;
+	max-width: 100%;
+	text-decoration: none;
+	color: #A8DFFF;
+	transition: color 0.25s ease;
+}
+
+.participants-request-document-link:hover {
+	color: #D7F0E2;
+}
+
+.participants-request-document-text {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 120%;
+	letter-spacing: 0.01em;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: inherit;
+}
+
+.participants-request-documents .participants-request-button-icon {
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 12V1M8 12L3 6.86381M8 12L13 6.86381' stroke='%23A8DFFF' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 12V15H15V12' stroke='%23A8DFFF' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.participants-request-documents .participants-request-document-link:hover .participants-request-button-icon {
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 12V1M8 12L3 6.86381M8 12L13 6.86381' stroke='%23D7F0E2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 12V15H15V12' stroke='%23D7F0E2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
 .participants-request-button {
 	display: inline-flex;
 	justify-content: center;
@@ -247,6 +317,10 @@ body > #participants-request-root {
 	.participants-request-button-wide {
 		width: fit-content;
 		justify-content: center;
+	}
+
+	.participants-request-documents {
+		min-height: 280px;
 	}
 }
 
