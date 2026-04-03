@@ -78,11 +78,11 @@
         order: 1;
     }
 
-    .footer-link[data-i18n='footer.link2'] {
+    .footer-link--personal-data {
         order: 2;
     }
 
-    .footer-link[data-i18n='footer.link3'] {
+    .footer-link--cookies {
         order: 3;
     }
 }

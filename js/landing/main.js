@@ -127,6 +127,9 @@ async function initPage() {
     await loadComponent('#burger-slot', `${componentBase}burger.html`);
     await loadComponent('#hero-root', `${componentBase}hero.html`);
     await loadComponent('#organizators-root', `${componentBase}organizators.html`);
+    if (typeof bindOrganizatorsAccordionTitle === 'function') {
+        bindOrganizatorsAccordionTitle();
+    }
     await loadComponent('#mission-root', `${componentBase}mission.html`);
     await loadComponent('#request-root', `${componentBase}request.html`);
     await loadComponent('#benefits-root', `${componentBase}benefits.html`);

@@ -1,3 +1,10 @@
+function bindOrganizatorsAccordionTitle() {
+    const header = document.querySelector('.organizators-title');
+    if (!header || header.dataset.organizatorsBound === 'true') return;
+    header.addEventListener('click', organizatorsAccordion);
+    header.dataset.organizatorsBound = 'true';
+}
+
 function organizatorsAccordion() {
     const header = document.querySelector('.organizators-title');
     const items = document.querySelectorAll('.organizators-accordion-item');

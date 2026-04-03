@@ -206,6 +206,17 @@
 	font-weight: 600;
 }
 
+.accordion-organizer-link {
+	color: inherit;
+	font-weight: inherit;
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.accordion-organizer-link:hover {
+	color: #376BCA;
+}
+
 .accordion-content li + li {
 	margin-top: 0;
 }
