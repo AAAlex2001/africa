@@ -158,7 +158,10 @@ const translations = {
         'footer.link1': 'Политика конфиденциальности',
         'footer.link2': 'Политика в отношении обработки персональных данных',
         'footer.link3': 'Политика использования cookie-файлов',
-        'footer.copy': '© 2025 Санкт-Петербургский горный университет'
+        'footer.copy': '© 2025 Санкт-Петербургский горный университет',
+        'dialog.title': 'Форум осуществляется в рамках ',
+        'dialog.titleHighlight': 'второго российско-африканского сырьевого диалога',
+        'dialog.button': 'Подробнее о сырьевом диалоге',
     },
     en: {
         'pageTitle': 'Russian-African Forum',
@@ -317,7 +320,10 @@ const translations = {
         'footer.link1': 'Privacy policy',
         'footer.link2': 'Personal data processing policy',
         'footer.link3': 'Cookie policy',
-        'footer.copy': '© 2025 Saint Petersburg Mining University'
+        'footer.copy': '© 2025 Saint Petersburg Mining University',
+        'dialog.title': 'The Forum is conducted as part of the',
+        'dialog.titleHighlight': 'second Russian-African Raw Materials Dialogue',
+        'dialog.button': 'Learn more about the raw materials dialogue',
     }
 };
 
