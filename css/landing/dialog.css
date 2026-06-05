@@ -6,16 +6,9 @@
     width: 100%;
     box-sizing: border-box;
     padding: 48px 16px;
-    gap: 24px;
     background-color: #FFFFFF;
     border-radius: 16px;
     background-image:
-        linear-gradient(
-            264.7deg,
-            rgba(255, 255, 255, 0.18) 0%,
-            rgba(255, 255, 255, 0.12) 45%,
-            rgba(255, 255, 255, 0.06) 100%
-        ),
         linear-gradient(
             264.7deg,
             rgba(45, 119, 77, 0.70) 0%,
@@ -23,65 +16,75 @@
             rgba(10, 30, 18, 0.94) 100%
         ),
         url('../../assets/dialog.png');
-    background-size: cover, cover, 100% auto;
-    background-position: center, center, center;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-blend-mode: normal, multiply, normal;
+    background-blend-mode: multiply, normal;
 }
 
 .dialog-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    align-items: flex-start;
+    gap: 32px;
 }
 
 .dialog-title {
     font-family: 'Inter';
-    font-weight: 700;
+    font-weight: 400;
     font-style: Bold;
     font-size: 24px;
     line-height: 130%;
     color: #FFFFFF;
     margin: 0;
+    text-align: left;
 }
 
 .dialog-title-highlight {
     font-weight: 700;
     font-style: italic;
     color: #A8DFFF;
+    margin: 0;
 }
 
 .dialog-button {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #27509B;
+    padding: 20px 32px;
+    background: transparent;
     color: #FFFFFF;
-    font-size: 14px;
-    line-height: 130%;
+    font-size: 16px;
+    line-height: 120%;
     font-family: 'Inter';
-    font-weight: 600;
-    font-style: SemiBold;
-    letter-spacing: 0%;
+    font-weight: 700;
+    font-style: Bold;
+    letter-spacing: 0.01em;
     text-decoration: none;
     border-radius: 32px;
+    border: 1px solid #FFFFFF;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.dialog-button:hover {
+    color: #9FC1FF;
+    border-color: #9FC1FF;
 }
 
 @media (min-width: 770px) {
     .dialog-container {
         align-items: flex-start;
         padding: 64px 24px;
-        background-size: cover, cover, auto 100%;
-        background-position: center, center, right center;
+        background-size: cover, auto 100%;
+        background-position: center, right center;
     }
+}
 
-    .dialog-content {
-        align-items: flex-start;
-        max-width: 55%;
+@media (min-width: 1440px) {
+    .dialog-container {
+        padding: 64px 48px;
     }
 
     .dialog-title {
-        text-align: left;
+        font-size: 32px;
     }
 }
 
