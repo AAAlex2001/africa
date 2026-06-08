@@ -8,11 +8,17 @@
     padding: 48px 16px;
     border-radius: 16px;
     background-image:
-        linear-gradient(to right, rgba(25, 89, 52, 0.9), rgba(54, 157, 98, 0.9)),
+        linear-gradient(
+            264.7deg,
+            rgba(45, 119, 77, 0.70) 0%,
+            rgba(45, 119, 77, 0.92) 45%,
+            rgba(10, 30, 18, 0.94) 100%
+        ),
         url('../../assets/dialog.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-blend-mode: multiply, normal;
 }
 
 .dialog-content {
